@@ -22,7 +22,7 @@ kernel <%= @kernel %>
 <% if @host.operatingsystem.name == 'Fedora' and @host.operatingsystem.major.to_i > 16 -%>
 append initrd=<%= @initrd %> ks=<%= foreman_url('provision')%> ks.device=bootif network ks.sendmac
 <% elsif @host.operatingsystem.name != 'Fedora' and @host.operatingsystem.major.to_i >= 7 -%>
-append initrd=<%= @initrd %> ks=<%= foreman_url('provision')%> network ks.sendmac <% if @host.params['fips_enabled'] == 'true' %>fips=1
+append initrd=<%= @initrd %> ks=<%= foreman_url('provision')%> network ks.sendmac <% if host_param('fips_enabled') == 'true' %>fips=1
 <% end -%>
 <% else -%>
 append initrd=<%= @initrd %> ks=<%= foreman_url('provision')%> ksdevice=bootif network kssendmac

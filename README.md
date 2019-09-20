@@ -1,4 +1,7 @@
 # satellite6-fips-client
+
+NOTE: The templates from this git repositories have been merged into [community-templates](https://github.com/theforeman/community-templates) and are now part of Foreman releases. Satellite documentation will be updated accordingly.
+
 Provisioning Templates and Snippets Useful for Deploying FIPS-140 enabled Clients with Satellite 6. 
 Setting Up a Red Hat Enterprise Linux system in FIPS mode is documented in the [Red Hat Knowledgebase](https://access.redhat.com/solutions/137833).
 However most of the steps documented in that article are manual. The provisioning templates in this repo aim to make it possible to integrate 
